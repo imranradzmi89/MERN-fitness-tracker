@@ -1,8 +1,9 @@
-import React from 'react'
-import {BrowserRouter as Router, Route} from 'react-router-dom'
+import React, {Component} from 'react'
+import {Link } from 'react-router-dom'
 
 export default class Navbar extends Component {
-    return() {
+    render() {
+        return (
         <nav className= "navbar navbar-dark bg-dark navbar-expand-lg">
         <Link to ="/" className = "navbar-brand">ExcerTracker</Link>
         <div className = "collapse navbar-collapse">
@@ -10,7 +11,6 @@ export default class Navbar extends Component {
         <li className = "navbar-item">
         <Link to="/" className = "nav-link">Exercises</Link>
         </li>
-        <li className= "nav-link">Exercises</li>
         <li className="navbar-item">
         <Link to="/create" className = "nav-link">Create Exercise</Link>
         </li>   
@@ -20,9 +20,6 @@ export default class Navbar extends Component {
         </ul>    
         </div>    
         </nav>
-    } 
-        
-    
-
-
+        )    
+} 
 }
