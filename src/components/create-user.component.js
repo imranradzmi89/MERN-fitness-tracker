@@ -22,13 +22,12 @@ onChangeUsername(e) {
 onSubmit(e) {
         e.preventDefault()
 
-        const username = {
+        const user = {
             username: this.state.username,
-        
         }
 
-        console.log(username)
-        axios.post('http://localhost:5000/users/add' , username)
+        console.log(user)
+        axios.post('http://localhost:5000/users/add' , user)
         .then( res => console.log(res.data))
         this.setState({
             username: ''
